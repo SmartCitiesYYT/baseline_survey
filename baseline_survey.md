@@ -142,3 +142,22 @@ kable(table1, format = "markdown")
 
 The majority of respondents (506) used their personal vehicle for between 76 and 100% of their trips. Other than using their personal vehicle most repondents used some combination of transportation modes including public transit, walking, bicycling, and taxis. 
 
+#### Question 7
+
+## I would be willing to use smart technologies (smartphone, wearable tech, or other device) to support an integrated mobility strategy in St. John's
+
+
+
+
+
+
+```r
+plot(q7_plot)
+```
+
+![](baseline_survey_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
+
+**Figure 7. Histogram of respones to whether participants would be willing to use smart technologies.**
+
+The majority of participants would be willing to use smart technologies (smartphone, wearable tech, or other device) to support an integrated mobility strategy in St. John's. 
+
