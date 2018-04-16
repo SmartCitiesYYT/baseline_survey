@@ -4,12 +4,10 @@ output:
         keep_md: true
 ---
 
-```{r setup, include=FALSE}
-options(scipen = 2, digits=4)
+```{r, echo = FALSE}
 library(knitr)
 library(dplyr)
 library(ggplot2)
-opts_chunk$set(warning = FALSE, message = FALSE, error = FALSE, tidy = TRUE, comment=NA)
 ```
 
 # Smart Cities YYT Baseline Survey Results
