@@ -1,0 +1,54 @@
+---
+title: "Baseline Survey"
+author: "Daniel Fuller"
+date: '2018-04-16'
+output: html_document
+---
+
+## Smart Cities YYT Baseline Survey Results
+
+Results are from 977 participants who completed the online survey. Once complete we will post the analysis of the final results. We will flag invalid results or changes in sample size below each figure or description. 
+
+```{r, echo=FALSE, warning = FALSE, message = FALSE}
+library(dplyr)
+library(ggplot2)
+baseline_data <- read.csv("/Users/Milestones/Dropbox/Grants/Smart Cities/baseline_survey/St. Johns Smart Cities Challenge - Mobility Survey_Final_04162018.csv", na.strings = c(""))
+
+baseline_data <- select(baseline_data, 5:27)
+colnames(baseline_data) <- c("get_around", "feel_safe", "use_prefered_mode", "design", "street_layout", "use_pers_vehicle", "use_fam_vehicle", "use_bus", "use_taxi", "use_bicycle", "use_trails", "use_other", "other1", "other2", "other3", "other4", "other5", "other6", "other7", "use_tech", "postal_code", "gender", "age")
+```
+
+#### Question 1
+
+##I can easily get around St. John's
+
+```{r, echo=FALSE, warning = FALSE}
+baseline_data$get_around <- recode_factor(baseline_data$get_around, `Strongly agree` = "Strong agree", `Agree` = "Agree", `Neither agree nor disagree` = "No Opinion", `Disagree` = "Disagree", `Strongly disagree` = "Strong disagree", `I Don't Know` = "DKN")
+```
+
+```{r, echo = FALSE, warning = FALSE}
+colour_palette <- c("#2c7bb6", "#abd9e9", "#ffffbf", "#fdae61", "#d7191c", "black")
+
+q1_plot <- ggplot(baseline_data, aes(get_around, fill = get_around)) + 
+  geom_histogram(stat = "count", color="black") + 
+  scale_fill_manual(values=colour_palette) + 
+  theme_classic()
+plot(q1_plot)
+```
+
+#### Question 2
+
+##I feel safe while getting around in St. John's
+
+```{r, echo=FALSE, warning = FALSE}
+baseline_data$feel_safe <- recode_factor(baseline_data$feel_safe, `Strongly agree` = "Strong agree", `Agree` = "Agree", `Neither agree nor disagree` = "No Opinion", `Disagree` = "Disagree", `Strongly disagree` = "Strong disagree", `I Don't Know` = "DKN")
+```
+
+```{r, echo = FALSE, warning = FALSE}
+q2_plot <- ggplot(baseline_data, aes(feel_safe, fill = feel_safe)) + 
+  geom_histogram(stat = "count", color="black") + 
+  scale_fill_manual(values=colour_palette) + 
+  theme_classic()
+plot(q2_plot)
+```
+
