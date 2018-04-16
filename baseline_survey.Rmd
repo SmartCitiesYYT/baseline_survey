@@ -1,11 +1,4 @@
----
-title: "Baseline Survey"
-author: "Daniel Fuller"
-date: '2018-04-16'
-output: html_document
----
-
-## Smart Cities YYT Baseline Survey Results
+# Smart Cities YYT Baseline Survey Results
 
 Results are from 977 participants who completed the online survey. Once complete we will post the analysis of the final results. We will flag invalid results or changes in sample size below each figure or description. 
 
