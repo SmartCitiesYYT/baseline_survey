@@ -9,7 +9,7 @@ Results are from 977 participants who completed the online survey. Once complete
 
 #### Question 1
 
-##I can easily get around St. John's
+## I can easily get around St. John's
 
 
 
@@ -24,7 +24,7 @@ plot(q1_plot)
 
 #### Question 2
 
-##I feel safe while getting around in St. John's
+## I feel safe while getting around in St. John's
 
 
 
@@ -36,4 +36,20 @@ plot(q2_plot)
 ```
 
 ![](baseline_survey_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+
+#### Question 3
+
+## I can use my preferred mode of transportation (for example car, bus, human-powered transportation or other) in St. John’s
+
+
+
+
+
+
+```r
+plot(q3_plot)
+```
+
+![](baseline_survey_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+
 
