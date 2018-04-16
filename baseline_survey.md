@@ -73,4 +73,23 @@ plot(q4_plot)
 
 ![](baseline_survey_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
-The vast majority of people either disagree or stronly disagree that St. John's is designed for accessible transportation. This suggests that there is a strong concensus to improve accesible design in St. John's. 
+The vast majority of people either disagree or stronly disagree that St. John's is designed for accessible transportation. This suggests that there is a strong concensus to improve accesible design in St. John's. Compared to the previous questions, there is an increase in the number of `Do Not Know` responses with 52 people responding that they did not know. This suggests that respondents may have had difficulty answering or understanding this question. 
+
+#### Question 5
+
+## The layout of St. John’s and its streets meet my mobility needs
+
+
+
+
+
+
+```r
+plot(q5_plot)
+```
+
+![](baseline_survey_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+
+The layout of the streets does not meet the needs of the majority of respondents. There is a strong tendency for respondents to answer that they strongly disagree or that they have no opinion. This suggests that respondents tended to have a strong opinion or tended to choose a response category near the center (no opinion). 
+
+
