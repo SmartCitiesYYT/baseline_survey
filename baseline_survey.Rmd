@@ -4,7 +4,7 @@ output:
         keep_md: true
 ---
 
-```{r, echo = FALSE}
+```{r, include = FALSE}
 library(knitr)
 library(dplyr)
 library(ggplot2)
@@ -25,17 +25,20 @@ colnames(baseline_data) <- c("get_around", "feel_safe", "use_prefered_mode", "de
 
 ##I can easily get around St. John's
 
-```{r, echo=FALSE, warning = FALSE}
+```{r, include = FALSE, warning = FALSE}
 baseline_data$get_around <- recode_factor(baseline_data$get_around, `Strongly agree` = "Strong agree", `Agree` = "Agree", `Neither agree nor disagree` = "No Opinion", `Disagree` = "Disagree", `Strongly disagree` = "Strong disagree", `I Don't Know` = "DKN")
 ```
 
-```{r, echo = FALSE, warning = FALSE}
+```{r, include = FALSE, warning = FALSE}
 colour_palette <- c("#2c7bb6", "#abd9e9", "#ffffbf", "#fdae61", "#d7191c", "black")
 
 q1_plot <- ggplot(baseline_data, aes(get_around, fill = get_around)) + 
   geom_histogram(stat = "count", color="black") + 
   scale_fill_manual(values=colour_palette) + 
   theme_classic()
+```
+
+```{r}
 plot(q1_plot)
 ```
 
@@ -43,15 +46,18 @@ plot(q1_plot)
 
 ##I feel safe while getting around in St. John's
 
-```{r, echo=FALSE, warning = FALSE}
+```{r, include = FALSE, warning = FALSE}
 baseline_data$feel_safe <- recode_factor(baseline_data$feel_safe, `Strongly agree` = "Strong agree", `Agree` = "Agree", `Neither agree nor disagree` = "No Opinion", `Disagree` = "Disagree", `Strongly disagree` = "Strong disagree", `I Don't Know` = "DKN")
 ```
 
-```{r, echo = FALSE, warning = FALSE}
+```{r, include = FALSE, warning = FALSE}
 q2_plot <- ggplot(baseline_data, aes(feel_safe, fill = feel_safe)) + 
   geom_histogram(stat = "count", color="black") + 
   scale_fill_manual(values=colour_palette) + 
   theme_classic()
+```
+
+```{r}
 plot(q2_plot)
 ```
 
