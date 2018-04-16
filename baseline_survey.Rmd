@@ -1,10 +1,22 @@
+---
+output:
+      html_document:
+        keep_md: true
+---
+
+```{r setup, include=FALSE}
+options(scipen = 2, digits=4)
+library(knitr)
+library(dplyr)
+library(ggplot2)
+opts_chunk$set(warning = FALSE, message = FALSE, error = FALSE, tidy = TRUE, comment=NA)
+```
+
 # Smart Cities YYT Baseline Survey Results
 
 Results are from 977 participants who completed the online survey. Once complete we will post the analysis of the final results. We will flag invalid results or changes in sample size below each figure or description. 
 
 ```{r, echo=FALSE, warning = FALSE, message = FALSE}
-library(dplyr)
-library(ggplot2)
 baseline_data <- read.csv("/Users/Milestones/Dropbox/Grants/Smart Cities/baseline_survey/St. Johns Smart Cities Challenge - Mobility Survey_Final_04162018.csv", na.strings = c(""))
 
 baseline_data <- select(baseline_data, 5:27)
