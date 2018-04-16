@@ -126,17 +126,19 @@ treemap(data_tree1,
 
 ```r
 table1 <- table(data_tree1$percent, data_tree1$mode)
-kable(table1)
+kable(table1, format = "markdown")
 ```
 
-          Vehicle: Personal   Vehicle: Family or Friend   Public Transport   Walk   Bicycle   Taxi   Other
--------  ------------------  --------------------------  -----------------  -----  --------  -----  ------
-0%                      145                         310                449     66       508    219     477
-1-25%                    49                         346                207    512       200    544      37
-26-50%                   60                          46                 43    157        47     26       2
-51-75%                  187                          23                 23     81        10     12       1
-76-99%                  379                          26                 25     70         8      8       2
-100%                    127                          10                  7     15         2      0       0
+
+
+|       | Vehicle: Personal| Vehicle: Family or Friend| Public Transport| Walk| Bicycle| Taxi| Other|
+|:------|-----------------:|-------------------------:|----------------:|----:|-------:|----:|-----:|
+|0%     |               145|                       310|              449|   66|     508|  219|   477|
+|1-25%  |                49|                       346|              207|  512|     200|  544|    37|
+|26-50% |                60|                        46|               43|  157|      47|   26|     2|
+|51-75% |               187|                        23|               23|   81|      10|   12|     1|
+|76-99% |               379|                        26|               25|   70|       8|    8|     2|
+|100%   |               127|                        10|                7|   15|       2|    0|     0|
 
 The majority of respondents (506) used their personal vehicle for between 76 and 100% of their trips. Other than using their personal vehicle most repondents used some combination of transportation modes including public transit, walking, bicycling, and taxis. 
 
